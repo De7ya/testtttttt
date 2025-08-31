@@ -1,0 +1,55 @@
+{
+    "general_setting": {
+        "keyword": ["general", "fundamental", "site information", "site", "website settings", "basic settings", "global settings","site color","timezone","site currency","pagination","currency format","site title","base color","secondary color","paginate"],
+        "title": "الإعدادات العامة",
+        "subtitle": "قم بتكوين المعلومات الأساسية للموقع.",
+        "icon": "las la-cog",
+        "route_name": "admin.setting.general"
+    },
+    "logo_favicon": {
+        "keyword": ["branding", "identity", "logo upload", "site branding", "brand identity","favicon","website icon","website favicon","website logo"],
+        "title": "الشعار والأيقونة المفضلة",
+        "subtitle": "قم برفع شعارك والأيقونة المفضلة (Favicon) هنا.",
+        "icon": "las la-images",
+        "route_name": "admin.setting.logo.icon"
+    },
+    "system_configuration": {
+        "keyword": ["basic modules", "control", "modules", "system", "configuration settings", "system control","force ssl","force secure password","email control","sms control","verification control","push notification control","language control","mobile verification","email verification"],
+        "title": "تهيئة النظام",
+        "subtitle": "تحكم في جميع الوحدات الأساسية للنظام.",
+        "icon": "las la-cogs",
+        "route_name": "admin.setting.system.configuration"
+    },
+    "notification_setting": {
+        "keyword": ["email configuration","sms configure","push notification configure","email setting","sms setting","push notification setting","firebase setting","firebase control","email template","sms template","push notification template","notification template","smtp","sendgrid","send grid","mailjet","mail jet","php","nexmo","clickatell","click a tell","infobip","info bip","message bird","sms broadcast","twilio","text magic","custom api","template setting","global template","global notification"],
+        "title": "إعدادات الإشعارات",
+        "subtitle": "تحكم وقم بتهيئة جميع عناصر الإشعارات في النظام.",
+        "icon": "las la-bell",
+        "route_name": "admin.setting.notification.global.email"
+    },
+    "manage_frontend": {
+        "keyword": ["frontend","template","manage frontend", "frontend contents", "frontend settings", "about us","banner","contact","faq","social icons","section settings","subscribe"],
+        "title": "إدارة الواجهة الأمامية",
+        "subtitle": "تحكم في جميع محتويات الواجهة الأمامية للنظام.",
+        "icon": "la la-html5",
+        "route_name": "admin.frontend.index"
+    },
+    "manage_pages": {
+        "keyword": ["pages","manage pages", "home page","contact page","blog page"],
+        "title": "إدارة الصفحات",
+        "subtitle": "تحكم في الصفحات الديناميكية والثابتة للنظام.",
+        "icon": "las la-list",
+        "route_name": "admin.frontend.manage.pages"
+    },
+    "policy_pages": {
+        "keyword": ["privacy and policy", "terms and condition", "terms of service"],
+        "title": "صفحات السياسات",
+        "subtitle": "قم بتكوين سياساتك وشروط النظام هنا.",
+        "icon": "las la-shield-alt",
+        "route_name": "admin.frontend.sections",
+        "params":{
+            "key":"policy_pages"
+        }
+
+    }
+}

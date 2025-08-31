@@ -1,0 +1,564 @@
+{
+    "dashboard": {
+        "keyword": [
+            "Dashboard",
+            "Home",
+            "Panel",
+            "Admin",
+            "Control center",
+            "Overview",
+            "Main hub",
+            "Management hub",
+            "Administrative hub",
+            "Central hub",
+            "Command center",
+            "Administrator portal",
+            "Centralized interface",
+            "Admin console",
+            "Management dashboard",
+            "Main screen",
+            "Administrative dashboard",
+            "Command dashboard",
+            "Main control panel"
+        ],
+        "title": "لوحة تحكم",
+        "icon": "las la-home",
+        "route_name": "admin.dashboard",
+        "menu_active": "admin.dashboard"
+    },
+    "manage_users": {
+        "title": "ادارة مستخدمين",
+        "icon": "las la-users-cog",
+        "counters": [
+            "bannedUsersCount",
+            "emailUnverifiedUsersCount",
+            "mobileUnverifiedUsersCount"
+        ],
+        "menu_active": "admin.users*",
+        "submenu": [
+            {
+                "keyword": [
+                    "active users",
+                    "Manage Users",
+                    "User management",
+                    "User control",
+                    "User status",
+                    "User activity",
+                    "User analytics"
+                ],
+                "title": "المستخدمون النشطون",
+                "route_name": "admin.users.active",
+                "menu_active": "admin.users.active"
+            },
+            {
+                "keyword": [
+                    "banned users",
+                    "Manage Users",
+                    "User management",
+                    "Account bans",
+                    "User activity"
+                ],
+                "title": "المستخدمون المحظورون",
+                "route_name": "admin.users.banned",
+                "menu_active": "admin.users.banned",
+                "counter": "bannedUsersCount"
+            },
+            {
+                "keyword": [
+                    "email unverified users",
+                    "Manage Users",
+                    "User verification",
+                    "User authentication",
+                    "User management"
+                ],
+                "title": "السائقين",
+                "route_name": "admin.users.driver",
+                "menu_active": "admin.users.driver",
+                "counter": "emailUnverifiedUsersCount"
+            },
+            {
+                "keyword": [
+                    "all users users",
+                    "Manage Users",
+                    "User management",
+                    "User control",
+                    "User activity",
+                    "User analytics"
+                ],
+                "title": "جميع المستخدمين",
+                "route_name": "admin.users.all",
+                "menu_active": "admin.users.all"
+            },
+            {
+                "keyword": [
+                    "send notification users",
+                    "Manage Users",
+                    "User notifications",
+                    "User management",
+                    "User activity"
+                ],
+                "title": "إرسال إشعار",
+                "route_name": "admin.users.notification.all",
+                "menu_active": "admin.users.notification.all"
+            }
+        ]
+    },
+    "payments": {
+        "title": "المدفوعات",
+        "icon": "las la-money-bill-wave-alt",
+        "counters": [
+            "pendingDepositsCount"
+        ],
+        "menu_active": "admin.deposit*",
+        "submenu": [
+            {
+                "keyword": [
+                    "Pending Payments",
+                    "Payments",
+                    "Payment management",
+                    "Payment control",
+                    "Payment status",
+                    "Payment activity"
+                ],
+                "title": "المدفوعات المعلقة",
+                "route_name": "admin.deposit.pending",
+                "menu_active": "admin.deposit.pending",
+                "counter": "pendingDepositsCount",
+                "params": {
+                    "user_id": ""
+                }
+            },
+            {
+                "keyword": [
+                    "Approved Payments",
+                    "Payments",
+                    "Payment management",
+                    "Payment activity"
+                ],
+                "title": "المدفوعات المعتمدة",
+                "route_name": "admin.deposit.approved",
+                "menu_active": "admin.deposit.approved",
+                "params": {
+                    "user_id": ""
+                }
+            },
+            {
+                "keyword": [
+                    "Successful Payments",
+                    "Payments",
+                    "Payment management",
+                    "Payment activity"
+                ],
+                "title": "مدفوعات ناجحة",
+                "route_name": "admin.deposit.successful",
+                "menu_active": "admin.deposit.successful",
+                "params": {
+                    "user_id": ""
+                }
+            },
+            {
+                "keyword": [
+                    "Rejected Payments",
+                    "Payments",
+                    "Payment management",
+                    "Payment activity"
+                ],
+                "title": "المدفوعات المرفوضة",
+                "route_name": "admin.deposit.rejected",
+                "menu_active": "admin.deposit.rejected",
+                "params": {
+                    "user_id": ""
+                }
+            },
+            {
+                "keyword": [
+                    "Initiated Payments",
+                    "Payments",
+                    "Payment management",
+                    "Payment activity"
+                ],
+                "title": "المدفوعات المبدئية",
+                "route_name": "admin.deposit.initiated",
+                "menu_active": "admin.deposit.initiated",
+                "params": {
+                    "user_id": ""
+                }
+            },
+            {
+                "keyword": [
+                    "All Payments",
+                    "Payments",
+                    "Payment management",
+                    "Payment control",
+                    "Payment activity"
+                ],
+                "title": "جميع المدفوعات",
+                "route_name": "admin.deposit.list",
+                "menu_active": "admin.deposit.list",
+                "params": {
+                    "user_id": ""
+                }
+            }
+        ]
+    },
+    "booking_history": {
+        "title": "سجل الحجز",
+        "icon": "las la-credit-card",
+        "counters": [
+            "PendingVehicleTicket"
+        ],
+        "menu_active": "admin.vehicle.ticket*",
+        "submenu": [
+            {
+                "keyword": [
+                    "Pending Ticket",
+                    "Tickets",
+                    "Ticket management",
+                    "Ticket control",
+                    "Ticket status",
+                    "Ticket activity"
+                ],
+                "title": "تذكرة معلقة",
+                "route_name": "admin.vehicle.ticket.pending",
+                "menu_active": "admin.vehicle.ticket.pending",
+                "counter": "PendingVehicleTicket",
+                "params": {
+                    "user_id": ""
+                }
+            },
+            {
+                "keyword": [
+                    "Booked Ticket",
+                    "Tickets",
+                    "Ticket management",
+                    "Ticket activity"
+                ],
+                "title": "تذكرة محجوزة",
+                "route_name": "admin.vehicle.ticket.booked",
+                "menu_active": "admin.vehicle.ticket.booked",
+                "params": {
+                    "user_id": ""
+                }
+            },
+            {
+                "keyword": [
+                    "Rejected Ticket",
+                    "Tickets",
+                    "Ticket management",
+                    "Ticket activity"
+                ],
+                "title": "تذكرة مرفوضة",
+                "route_name": "admin.vehicle.ticket.rejected",
+                "menu_active": "admin.vehicle.ticket.rejected",
+                "params": {
+                    "user_id": ""
+                }
+            },
+            {
+                "keyword": [
+                    "All Ticket",
+                    "Tickets",
+                    "Ticket management",
+                    "Ticket control",
+                    "Ticket activity"
+                ],
+                "title": "جميع التذاكر",
+                "route_name": "admin.vehicle.ticket.list",
+                "menu_active": "admin.vehicle.ticket.list",
+                "params": {
+                    "user_id": ""
+                }
+            }
+        ]
+    },
+    "support_ticket": {
+        "title": "تذكرة الدعم",
+        "icon": "la la-ticket",
+        "counters": [
+            "pendingTicketCount"
+        ],
+        "menu_active": "admin.ticket*",
+        "submenu": [
+            {
+                "keyword": [
+                    "Pending Ticket",
+                    "Support Ticket",
+                    "Ticket management",
+                    "Ticket control",
+                    "Ticket status",
+                    "Ticket activity"
+                ],
+                "title": "تذكرة معلقة",
+                "route_name": "admin.ticket.pending",
+                "menu_active": "admin.ticket.pending",
+                "counter": "pendingTicketCount"
+            },
+            {
+                "keyword": [
+                    "Closed Ticket",
+                    "Support Ticket",
+                    "Ticket management",
+                    "Ticket activity"
+                ],
+                "title": "تذكرة مغلقة",
+                "route_name": "admin.ticket.closed",
+                "menu_active": "admin.ticket.closed"
+            },
+            {
+                "keyword": [
+                    "Answered Ticket",
+                    "Support Ticket",
+                    "Ticket management",
+                    "Ticket activity"
+                ],
+                "title": "تذكرة تم الرد عليها",
+                "route_name": "admin.ticket.answered",
+                "menu_active": "admin.ticket.answered"
+            },
+            {
+                "keyword": [
+                    "All Ticket",
+                    "Support Ticket",
+                    "Ticket management",
+                    "Ticket control",
+                    "Ticket activity"
+                ],
+                "title": "جميع التذاكر",
+                "route_name": "admin.ticket.index",
+                "menu_active": "admin.ticket.index"
+            }
+        ]
+    },
+    "reports": {
+        "title": "بلاغ",
+        "icon": "far fa-flag",
+        "menu_active": "admin.report*",
+        "submenu": [
+            {
+                "keyword": [
+                    "Transaction Log",
+                    "Report",
+                    "Transaction report",
+                    "Transaction history",
+                    "Transaction activity",
+                    "balance sheet",
+                    "balance log",
+                    "balance history"
+                ],
+                "title": "سجل المعاملات",
+                "route_name": "admin.report.transaction",
+                "menu_active": [
+                    "admin.report.transaction",
+                    "admin.report.transaction.search"
+                ],
+                "params": {
+                    "user_id": ""
+                }
+            },
+            {
+                "keyword": [
+                    "Login History",
+                    "Report",
+                    "Login report",
+                    "Login history",
+                    "Login activity"
+                ],
+                "title": "سجل تسجيل الدخول",
+                "route_name": "admin.report.login.history",
+                "menu_active": [
+                    "admin.report.login.history",
+                    "admin.report.login.ipHistory"
+                ]
+            },
+            {
+                "keyword": [
+                    "Notification History",
+                    "Report",
+                    "Notification report",
+                    "Notification history",
+                    "Notification activity",
+                    "email log",
+                    "email history",
+                    "sms log",
+                    "sms history",
+                    "push notification log",
+                    "push notification history"
+                ],
+                "title": "سجل الإشعارات",
+                "route_name": "admin.report.notification.history",
+                "menu_active": "admin.report.notification.history"
+            }
+        ]
+    },
+    "counter": {
+        "keyword": [
+            "Counter",
+            "Manage counter"
+        ],
+        "header":"Transport Manager",
+        "title": "المحطة",
+        "icon": "las la-warehouse",
+        "route_name": "admin.counter.index",
+        "menu_active": "admin.counter.index"
+    },
+    "manage_fleet": {
+        "title": "إدارة الأسطول",
+        "icon": "las la-bus",
+        "menu_active": "admin.fleet*",
+        "submenu": [
+            {
+                "keyword": [
+                    "Manage Fleet",
+                    "Layout",
+                    "Fleet Layout",
+                    "Seat Layout"
+                ],
+                "title": "تخطيط المقعد",
+                "route_name": "admin.fleet.layouts.index",
+                "menu_active": "admin.fleet.layouts.index"
+            },
+            {
+                "keyword": [
+                    "Manage Fleet",
+                    "Type",
+                    "Fleet Type",
+                    "Vehicle Type"
+                ],
+                "title": "نوع الأسطول",
+                "route_name": "admin.fleet.type.index",
+                "menu_active": "admin.fleet.type.index"
+            },
+            {
+                "keyword": [
+                    "Manage Vehicle",
+                    "Vehicle",
+                    "Transport",
+                    "Bus"
+                ],
+                "title": "المركبات",
+                "route_name": "admin.fleet.vehicles.index",
+                "menu_active": "admin.fleet.vehicles.index"
+            }
+        ]
+    },
+    "manage_trip": {
+        "title": "إدارة الرحلة",
+        "icon": "las la-bus",
+        "menu_active": "admin.trip.*",
+        "submenu": [
+            {
+                "keyword": [
+                    "Manage Trip",
+                    "Route"
+                ],
+                "title": "الطريق",
+                "route_name": "admin.trip.route.index",
+                "menu_active": "admin.trip.route.index"
+            },
+            {
+                "keyword": [
+                    "Manage Schedule",
+                    "Schedule",
+                    "Time"
+                ],
+                "title": "الجداول",
+                "route_name": "admin.trip.schedule.index",
+                "menu_active": "admin.trip.schedule.index"
+            },
+            {
+                "keyword": [
+                    "Manage Price",
+                    "Ticket",
+                    "Ticket Price"
+                ],
+                "title": "سعر التذكرة",
+                "route_name": "admin.trip.ticket.price.index",
+                "menu_active": ["admin.trip.ticket.price.index", "admin.trip.ticket.price.create", "admin.trip.ticket.price.edit"]
+            },
+            {
+                "keyword": [
+                    "Manage Trip",
+                    "Trip"
+                ],
+                "title": "رحلة",
+                "route_name": "admin.trip.list",
+                "menu_active": "admin.trip.list"
+            },
+            {
+                "keyword": [
+                    "Vehicle",
+                    "Assign"
+                ],
+                "title": "تخصيص المركبة",
+                "route_name": "admin.trip.vehicle.assign.index",
+                "menu_active": "admin.trip.vehicle.assign.index"
+            }
+        ]
+    },
+    "staffs": {
+        "keyword": [
+            "staff",
+            "staff"
+        ],
+        "header":"إدارة الموظفين",
+        "title": "موظفين",
+        "icon": "las la-warehouse",
+        "route_name": "admin.staff.index",
+        "menu_active": "admin.staff.index"
+    },
+    "Roles": {
+        "keyword": [
+            "role",
+            "role"
+        ],
+        "header":"صلاحيات",
+        "title": "صلاحيات",
+        "icon": "las la-warehouse",
+        "route_name": "admin.role.index",
+        "menu_active": "admin.role.index"
+    },
+    "system_setting": {
+        "keyword": [
+            "System Setting",
+            "setting",
+            "System configuration",
+            "System preferences",
+            "Configuration management",
+            "System setup"
+        ],
+        "header":"Settings",
+        "title": "إعدادات النظام",
+        "icon": "las la-life-ring",
+        "route_name": "admin.setting.system",
+        "menu_active": [
+            "admin.setting.system",
+            "admin.setting.general",
+            "admin.setting.socialite.credentials",
+            "admin.setting.system.configuration",
+            "admin.setting.logo.icon",
+            "admin.extensions.index",
+            "admin.language.manage",
+            "admin.language.key",
+            "admin.seo",
+            "admin.frontend.templates",
+            "admin.frontend.manage.*",
+            "admin.maintenance.mode",
+            "admin.setting.cookie",
+            "admin.setting.custom.css",
+            "admin.setting.sitemap",
+            "admin.setting.robot",
+            "admin.setting.notification.global.email",
+            "admin.setting.notification.global.sms",
+            "admin.setting.notification.global.push",
+            "admin.setting.notification.email",
+            "admin.setting.notification.sms",
+            "admin.setting.notification.push",
+            "admin.setting.notification.templates",
+            "admin.setting.notification.template.edit",
+            "admin.frontend.index",
+            "admin.frontend.sections*",
+            "admin.gateway*",
+            "admin.setting.app.purchase"
+        ]
+    }
+}

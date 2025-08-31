@@ -1,0 +1,70 @@
+@extends('admin.layouts.app')
+@push('topBar')
+  @include('admin.notification.top_bar')
+@endpush
+@section('panel')
+    @include('admin.notification.template.nav')
+    @include('admin.notification.template.shortcodes')
+
+
+    <form action="{{ route('admin.setting.notification.template.update',['email',$template->id]) }}" method="post">
+        @csrf
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mt-4">
+                    <div class="card-header bg--primary">
+                        <h5 class="card-title text-white">@lang('نموذج البريد الإلكتروني
+')</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label>@lang('الموضوع')</label>
+                                    <input type="text" class="form-control" placeholder="@lang('موضوع البريد الإلكتروني')" name="subject" value="" required/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>@lang('الحالة') <span class="text--danger">*</span></label>
+                                    <input type="checkbox" data-height="46px" data-width="100%" data-onstyle="-success"
+                                       data-offstyle="-danger" data-bs-toggle="toggle" data-on="@lang('إرسال البريد الإلكتروني')"
+                                       data-off="@lang("لا ترسل")" name="email_status"
+                                       @if($template->email_status) checked @endif>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>@lang('اسم المرسل في البريد الإلكتروني')</label>
+                                    <input type="text" class="form-control" name="email_sent_from_name" value="">
+                                    <small class="text-primary"><i><i class="las la-info-circle"></i> @lang('اترك الحقل فارغًا إذا كنت تريد استخدام اسم النموذج العام كاسم المرسل في البريد الإلكتروني.')</i></small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>@lang('البريد الإلكتروني المرسل منه
+')</label>
+                                    <input type="text" class="form-control" name="email_sent_from_address" value="">
+                                    <small class="text-primary"><i><i class="las la-info-circle"></i> @lang('اترك الحقل فارغًا إذا كنت تريد استخدام البريد الإلكتروني للنموذج العام كبريد مرسل.')</i></small>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>@lang('رسالة') <span class="text--danger">*</span></label>
+                                    <textarea name="email_body" rows="10" class="form-control nicEdit" placeholder="@lang('رسالتك باستخدام الأكواد المختصرة')"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn--primary w-100 h-45">@lang('تاكيد')</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+@endsection
+
+
+@push('breadcrumb-plugins')
+    <x-back route="{{ route('admin.setting.notification.templates') }}" />
+@endpush

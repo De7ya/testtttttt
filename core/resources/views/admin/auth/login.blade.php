@@ -1,0 +1,40 @@
+@extends('admin.layouts.master')
+@section('content')
+<div class="login-main"
+    style="background-image: url('{{ asset('assets/admin/images/login.jpg') }}')">
+    <div class="container custom-container">
+        <div class="row justify-content-center">
+            <div class="col-xxl-5 col-xl-5 col-lg-6 col-md-8 col-sm-11">
+                <div class="login-area">
+                    <div class="login-wrapper">
+                        <div class="login-wrapper__top" style="direction: rtl">
+                            <h3 class="title text-white">@lang('مرحبا بكم في') <strong>{{ __(gs('site_name')) }}</strong></h3>
+{{--                             <p class="text-white">{{ __($pageTitle) }} @lang('الى') {{ __(gs('site_name')) }}
+                                @lang('لوحة التحكم')</p>
+ --}}                        </div>
+                        <div class="login-wrapper__body">
+                            <form action="{{ route('admin.login') }}" method="POST"
+                                class="cmn-form mt-30 verify-gcaptcha login-form">
+                                @csrf
+                                <div class="form-group">
+                                    <label>@lang('اسم المستخدم')</label>
+                                    <input type="text" class="form-control" value="{{ old('username') }}" name="username" required>
+                                </div>
+                                <div class="form-group">
+                                    <div class="d-flex justify-content-between">
+                                        <label>@lang('كلمة السر')</label>
+                                        <a href="{{ route('admin.password.reset') }}" class="forget-text">@lang('هل نسيت كلمة السر؟')</a>
+                                    </div>
+                                    <input type="password" class="form-control" name="password" required>
+                                </div>
+                                <x-captcha />
+                                <button type="submit" class="btn cmn-btn w-100">@lang('تسجيل الدخول')</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
